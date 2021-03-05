@@ -24,7 +24,7 @@ layout: default
 
             {% endif %}
             <h2>In this version:</h2>
-            {% include toc.html html=content %}
+            {% include toc.html html=content skip_no_ids=true %}
 
             <div id="markdown-content-container">{% include anchor_headings.html html=content anchorBody=anchor %}</div>
             <hr>
