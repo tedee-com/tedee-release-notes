@@ -4,6 +4,7 @@
 
 - title: iOS
   docs:
+    - ios/1.117.0
     - ios/1.116.0
 
 - title: Embedded
