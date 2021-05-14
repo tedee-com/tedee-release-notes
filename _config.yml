@@ -26,17 +26,18 @@ baseurl: "/tedee-release-notes" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-#theme: minima
-remote_theme: aksakalli/jekyll-doc-theme@gh-pages
+
+theme: "just-the-docs"
+color_scheme: tedee
+heading_anchors: true
+back_to_top: true
+back_to_top_text: "Back to top"
+
 plugins:
   - jekyll-feed
 
 markdown: kramdown
 highlighter: rouge
-
-# theme options from https://bootswatch.com/3/
-# comment out this to use default Bootstrap
-bootwatch: cerulean # paper cerulean cosmo custom cyborg darkly flatly journal lumen readable sandstone simplex slate solar spacelab superhero united yeti
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -58,20 +59,15 @@ bootwatch: cerulean # paper cerulean cosmo custom cyborg darkly flatly journal l
 #   - vendor/gems/
 #   - vendor/ruby/
 
-defaults:
-- scope:
-    path: _docs
-    type: docs
-  values:
-    layout: docs
-    sectionid: docs
-    seo:
-      type: "WebPage"
-
 collections:
   docs:
     permalink: /:collection/:path/
     output: true
+
+just_the_docs:
+  collections:
+    docs:
+      name: Release Notes
 
 kramdown:
     auto_ids: true
