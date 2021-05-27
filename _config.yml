@@ -32,7 +32,7 @@ color_scheme: tedee
 heading_anchors: true
 back_to_top: true
 back_to_top_text: "Back to top"
-ga_tracking: UA-272819213-1
+ga_tracking: UA-197346079
 
 plugins:
   - jekyll-feed
