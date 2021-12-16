@@ -12,19 +12,35 @@ permalink: /
  {% endif %}
 {% endfor %}
 
-{% assign latest_version = docs | sort: "title" | last %}
-{% assign latest_version = latest_version.title %}
-{% assign sort = "Android,iOS,Embedded,Portal,Integrations" | split: ',' %}
+{% assign latest_android = docs | where: "parent", "Android" | sort: "title" | last %}
+{% assign latest_ios = docs | where: "parent", "iOS" | sort: "title" | last %}
+{% assign latest_doorlock = docs | where: "parent", "Door Lock" | sort: "title" | last %}
+{% assign latest_bridge = docs | where: "parent", "Bridge" | sort: "title" | last %}
+{% assign latest_keypad = docs | where: "parent", "Keypad" | sort: "title" | last %}
+
+{% assign order = "Android,iOS,Door Lock,Bridge,Keypad" | split: ',' %}
 
 {% assign items = docs | where: "title", latest_version | reverse %}
 
-{% for order in sort %}
- {% for item in items %}
-  {% if item.parent == order %}
+{% for item in order %}
+{% case item %}
+  {% when "Android" %}
+    {% assign doc = latest_android %}
+  {% when "iOS" %}
+    {% assign doc = latest_ios %}
+  {% when "Door Lock" %}
+    {% assign doc = latest_doorlock %}
+  {% when "Bridge" %}
+    {% assign doc = latest_bridge %}
+  {% when "Keypad" %}
+    {% assign doc = latest_keypad %}
+{% endcase %}
 
-# **{{ item.parent }} - {{ item.title }}**
-{{ item.content }}
+{% if doc == nil %}
+  {% continue %}
+{% endif %}
 
-  {% endif %}
- {% endfor %}
+# **{{ doc.parent }} - {{ doc.title }}**
+{{ doc.content }}
+
 {% endfor %}
