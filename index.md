@@ -14,10 +14,11 @@ permalink: /
 
 {% assign latest_android = docs | where: "parent", "Android" | sort: "title" | last %}
 {% assign latest_ios = docs | where: "parent", "iOS" | sort: "title" | last %}
+{% assign latest_lock = docs | where: "parent", "Lock" | sort: "title" | last %}
 {% assign latest_bridge = docs | where: "parent", "Bridge" | sort: "title" | last %}
 {% assign latest_keypad = docs | where: "parent", "Keypad" | sort: "title" | last %}
 
-{% assign order = "Android,iOS,Bridge,Keypad" | split: ',' %}
+{% assign order = "Android,iOS,Lock,Bridge,Keypad" | split: ',' %}
 
 {% assign items = docs | where: "title", latest_version | reverse %}
 
@@ -27,6 +28,8 @@ permalink: /
     {% assign doc = latest_android %}
   {% when "iOS" %}
     {% assign doc = latest_ios %}
+  {% when "Lock" %}
+    {% assign doc = latest_lock %}
   {% when "Bridge" %}
     {% assign doc = latest_bridge %}
   {% when "Keypad" %}
