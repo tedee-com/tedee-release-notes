@@ -1,6 +1,5 @@
-# [tedee Release Notes](https://tedee-com.github.io/tedee-release-notes/)
+# [Tedee Release Notes](https://tedee-com.github.io/tedee-release-notes/)
 
-## Overview
 This repository contains release history for Tedee Android and iOS app, firmware changes for Tedee devices. 
 
 The release notes are available [here](https://tedee-com.github.io/tedee-release-notes/).
