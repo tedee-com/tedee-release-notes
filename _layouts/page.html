@@ -9,8 +9,12 @@ layout: default
         </div>
 
         <div class="col-md-8">
-
-            <h1>{{ page.parent }} - {{ page.title }}</h1>
+            <div id="title">
+                <h1><b>{{ page.parent }} - {{ page.title }}</b></h1>
+                {% if page.release_date != nil %}
+                    <p id="subtitle">({{ page.release_date }})</p>
+                {% endif %}
+            </div>
 
 			<details open markdown="block">
   				<summary class="text-delta">

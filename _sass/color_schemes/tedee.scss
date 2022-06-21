@@ -1,1 +1,19 @@
 $link-color: $blue-000;
+
+#title {
+	h1 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0;
+		font-size: 0.75em;
+	}
+}
+
+details {
+	margin-top: 1.5em;
+	font-size: 24px;
+	li {
+		font-size: 16px;
+	}
+}

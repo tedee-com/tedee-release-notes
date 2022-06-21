@@ -40,7 +40,14 @@ permalink: /
   {% continue %}
 {% endif %}
 
+{::options parse_block_html="true" /}
+<div id="title">
 # **{{ doc.parent }} - {{ doc.title }}**
+{% if doc.release_date != nil %}
+<p>({{ doc.release_date }})</p>
+{% endif %}
+</div>
+
 {{ doc.content }}
 
 {% endfor %}
