@@ -2,6 +2,6 @@
 layout: default
 title: Keypad
 permalink: /docs/keypad/
-nav_order: 5
+nav_order: 6
 has_children: true
 ---
