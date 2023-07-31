@@ -14,10 +14,10 @@ permalink: /
 
 {% assign latest_android = docs | where: "parent", "Android" | sort: "title" | last %}
 {% assign latest_ios = docs | where: "parent", "iOS" | sort: "title" | last %}
-{% assign latest_lock = docs | where: "parent", "Lock" | sort: "title" | last %}
-{% assign latest_lock_go = docs | where: "parent", "Lock GO" | sort: "title" | last %}
-{% assign latest_bridge = docs | where: "parent", "Bridge" | sort: "title" | last %}
-{% assign latest_keypad = docs | where: "parent", "Keypad" | sort: "title" | last %}
+{% assign latest_lock = docs | where: "parent", "Lock" | sort: "nav_order" | first %}
+{% assign latest_lock_go = docs | where: "parent", "Lock GO" | sort: "nav_order" | first %}
+{% assign latest_bridge = docs | where: "parent", "Bridge" | sort: "nav_order" | first %}
+{% assign latest_keypad = docs | where: "parent", "Keypad" | sort: "nav_order" | first %}
 
 {% assign order = "Android,iOS,Lock,Lock GO,Bridge,Keypad" | split: ',' %}
 
