@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: tedee
+title: "Release Notes - Tedee"
 email: support@tedee.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: "Tedee Release Notes page is documentation of the past Tedee public releases of multiple areas: Android app, iOS app, Lock or Lock GO firmware, Bridge firmware, Keypad firmware."
   
 baseurl: "/tedee-release-notes" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://tedee-com.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 
@@ -36,6 +36,7 @@ ga_tracking: G-1FQP7Q9QMC
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 markdown: kramdown
 highlighter: rouge
