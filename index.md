@@ -3,7 +3,7 @@ layout: home
 nav_order: -999
 permalink: /
 title: "Home"
-description: "Tedee Release Notes page is documentation of the past Tedee public releases of multiple areas: Android app, iOS app, smart Lock firmware, Bridge firmware, Keypad firmware."
+description: "Tedee Release Notes page is documentation of the past Tedee public releases of multiple areas: Android app, iOS app, smart Lock firmware, Bridge firmware, Keypad firmware, Dry contact firmware."
 ---
 
 {% assign docs = '' | split: '' %}
@@ -19,8 +19,9 @@ description: "Tedee Release Notes page is documentation of the past Tedee public
 {% assign latest_lock_go = docs | where: "parent", "Lock GO" | sort: "nav_order" | first %}
 {% assign latest_bridge = docs | where: "parent", "Bridge" | sort: "nav_order" | first %}
 {% assign latest_keypad = docs | where: "parent", "Keypad" | sort: "nav_order" | first %}
+{% assign latest_dry_contact = docs | where: "parent", "Dry contact" | sort: "nav_order" | first %}
 
-{% assign order = "Android,iOS,Lock,Lock GO,Bridge,Keypad" | split: ',' %}
+{% assign order = "Android,iOS,Lock,Lock GO,Bridge,Keypad,Dry contact" | split: ',' %}
 
 {% assign items = docs | where: "title", latest_version | reverse %}
 
@@ -38,6 +39,8 @@ description: "Tedee Release Notes page is documentation of the past Tedee public
     {% assign doc = latest_bridge %}
   {% when "Keypad" %}
     {% assign doc = latest_keypad %}
+  {% when "Dry contact" %}
+    {% assign doc = latest_dry_contact %}
 {% endcase %}
 
 {% if doc == nil %}
