@@ -3,7 +3,7 @@ layout: home
 nav_order: -999
 permalink: /
 title: "Home"
-description: "Tedee Release Notes page is documentation of the past Tedee public releases of multiple areas: Android app, iOS app, smart Lock firmware, Bridge firmware, Keypad firmware, Dry contact firmware."
+description: "Tedee Release Notes page is documentation of the past Tedee public releases of multiple areas: Android app, iOS app and smart device firmwares."
 ---
 
 {% assign docs = '' | split: '' %}
