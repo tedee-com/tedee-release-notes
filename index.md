@@ -20,8 +20,9 @@ description: "Tedee Release Notes page is documentation of the past Tedee public
 {% assign latest_bridge = docs | where: "parent", "Bridge" | sort: "nav_order" | first %}
 {% assign latest_keypad = docs | where: "parent", "Keypad" | sort: "nav_order" | first %}
 {% assign latest_dry_contact = docs | where: "parent", "Dry contact" | sort: "nav_order" | first %}
+{% assign latest_portal = docs | where: "parent", "Portal" | sort: "nav_order" | first %}
 
-{% assign order = "Android,iOS,Lock,Lock GO,Bridge,Keypad,Dry contact" | split: ',' %}
+{% assign order = "Android,iOS,Lock,Lock GO,Bridge,Keypad,Dry contact,Portal" | split: ',' %}
 
 {% assign items = docs | where: "title", latest_version | reverse %}
 
@@ -41,6 +42,8 @@ description: "Tedee Release Notes page is documentation of the past Tedee public
     {% assign doc = latest_keypad %}
   {% when "Dry contact" %}
     {% assign doc = latest_dry_contact %}
+  {% when "Portal" %}
+    {% assign doc = latest_portal %}
 {% endcase %}
 
 {% if doc == nil %}
